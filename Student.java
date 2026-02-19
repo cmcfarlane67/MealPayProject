@@ -58,10 +58,13 @@ public class Student {
     }
 
     public String toString(){
-        String transactions = "";
-        for(Transaction t : transaction){
-            transactions += t.toString();
-        }
-        return "Name: " + name + " ID: " + id + " Balance: " + balance + " Transactions: " + transaction + "\n";
+    String transactions = "";
+    for(Transaction t : transaction){
+        transactions += t.toString() + "\n";
+    }
+    return "Name: " + name +
+           " ID: " + id +
+           " Balance: $" + String.format("%.2f", balance) +
+           "\nTransactions:\n" + transactions;
     }
 }

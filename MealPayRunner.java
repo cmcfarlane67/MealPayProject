@@ -3,10 +3,10 @@ public class MealPayRunner {
         PaySystem a = new PaySystem();
 
         System.out.println("Adding students:");
-        a.addStudents("Bobby Bobbs");
-        a.addStudents("Joe Schmo");
-        a.addStudents("Kelly Shelly");
-        a.addStudents("Bobby Bobbs");
+        a.addStudent("Bobby Bobbs");
+        a.addStudent("Joe Schmo");
+        a.addStudent("Kelly Shelly");
+        a.addStudent("Bobby Bobbs");
 
         System.out.println("Displaying the students: ");
 
@@ -19,7 +19,7 @@ public class MealPayRunner {
         a.logMeal(2, 20, 2);
         a.logMeal(2, 20, 2);
         a.logMeal(2, 20, 2);
-        a.addBalance(2,20,100,3);
+        a.addBalance(2, 20, 100, 3);
         a.addBalance(2, 21, 108, 3);
         a.logMeal(2, 21, 3);
         a.logMeal(2, 20, 4);
@@ -30,13 +30,13 @@ public class MealPayRunner {
         a.displayNegBalances();
 
         System.out.println("Who's ID #1? ");
-        a.getStudentFromID(1);
+        System.out.println(a.getStudentFromID(1));
 
         System.out.println("Who's ID #2? ");
-        a.getStudentFromID(2);
+        System.out.println(a.getStudentFromID(2));
 
         System.out.println("Who's ID #4? ");
-        a.getStudentFromID(4);
+        System.out.println(a.getStudentFromID(4));
 
         System.out.println("What transactions happened on 2/20? ");
         System.out.println(a.transactionsByDay(2, 20));
