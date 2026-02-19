@@ -13,9 +13,9 @@ public class PaySystem {
     public String transactionsByDay(int month, int day) {
         String s = "";
         for (Student st : students) {
-            ArrayList<Transaction> tByDay = st.getTransactionsByDate(month, day);
+            ArrayList<Transaction> tByDay = st.getTransactionByDate(month, day);
             if (tByDay != null && !tByDay.isEmpty()) {
-                s += "Student: " + st.getName() + " ID: " + st.getID() + "\n";
+                s += "Student: " + st.getName() + " ID: " + st.getId() + "\n";
                 for (Transaction t : tByDay) {
                     s += " " + t.toString() + "\n";
                 }
@@ -26,7 +26,7 @@ public class PaySystem {
 
     public void logMeal(int month, int day, int id) {
         for (Student st : students) {
-            if (st.getID() == id) {
+            if (st.getId() == id) {
                 st.chargeLunch(month, day);
             }
         }
@@ -35,7 +35,7 @@ public class PaySystem {
    //add balance to specific student
     public void addBalance(int month, int day, double amount, int id) {
         for (Student st : students) {
-            if (st.getID() == id) {
+            if (st.getId() == id) {
                 st.addFunds(month, day, amount);
             }
         }
@@ -69,7 +69,7 @@ public class PaySystem {
 
     public void getStudentFromID(int id) {
         for (Student st : students) {
-            if (st.getID() == id) {
+            if (st.getId() == id) {
                 System.out.println(st);
             }
         }
