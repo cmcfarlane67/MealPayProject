@@ -49,7 +49,7 @@ public class Student {
         return name;
     }
 
-    public int getId(){
+    public int getID(){
         return id;
     }
 
@@ -58,9 +58,9 @@ public class Student {
     }
 
     public String toString(){
-        String transaction = "";
+        String transactions = "";
         for(Transaction t : transaction){
-            transaction += t.toString();
+            transactions += t.toString();
         }
         return "Name: " + name + " ID: " + id + " Balance: " + balance + " Transactions: " + transaction + "\n";
     }
