@@ -5,10 +5,10 @@ public class Transaction {
     private double amount;
 
     // Constructors
-    public Transaction(int myMonth, int myDay, int myAmount){
+    public Transaction(int myMonth, int myDay, double amount2){
         month = myMonth;
         day = myDay;
-        amount = myAmount;
+        amount = amount2;
     }
 
     // Methods
