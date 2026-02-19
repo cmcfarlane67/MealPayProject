@@ -44,4 +44,24 @@ public class Student {
             return givenDay;
         }
     }
+
+    public String getName(){
+        return name;
+    }
+
+    public int getId(){
+        return id;
+    }
+
+    public double getBalance(){
+        return balance;
+    }
+
+    public String toString(){
+        String transaction = "";
+        for(Transaction t : transaction){
+            transaction += t.toString();
+        }
+        return "Name: " + name + " ID: " + id + " Balance: " + balance + " Transactions: " + transaction + "\n";
+    }
 }
